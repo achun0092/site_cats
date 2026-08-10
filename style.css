@@ -27,14 +27,14 @@ h1 {
     color: #333;
 }
 
-.toggle_buttons {
+.toggle-buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-bottom: 10px;
 }
 
-.toggle_buttons button {
+.toggle-buttons button {
     padding: 10px 30px;
     font-size: 1.1rem;
     font-weight: bold;
@@ -46,13 +46,13 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.toggle_buttons button.active {
+.toggle-buttons button.active {
     background-color: #ffb380;
     color: white;
 }
 
 /* --- 動態名片區 --- */
-.profile_card {
+.profile-card {
     background-color: white;
     border-radius: 20px;
     padding: 30px 20px;
@@ -60,11 +60,11 @@ h1 {
     margin-bottom: 30px;
 }
 
-.hidden_card {
+.hidden-card {
     display: none !important; 
 }
 
-.active_card {
+.active-card {
     display: block; 
 }
 
@@ -93,13 +93,13 @@ h3 {
     padding-bottom: 5px;
 }
 
-.gallery_grid {
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
 
-.gallery_grid img {
+.gallery-grid img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -108,14 +108,14 @@ h3 {
 }
 
 /* --- 動態影音區 --- */
-.video_section video {
+.video-section video {
     width: 100%;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
 /* --- 底部社群入口 --- */
-.social_btn {
+.social-btn {
     display: inline-block;
     background-color: #ffb380;
     color: white;

@@ -1,28 +1,29 @@
-const btn_cat1 = document.getElementById('btn_cat1');
-const btn_cat2 = document.getElementById('btn_cat2');
-const card_cat1 = document.getElementById('card_cat1');
-const card_cat2 = document.getElementById('card_cat2');
+// 1. 變數使用駝峰命名 (CamelCase)，對應的字串維持 HTML 的減號 (Kebab-case)
+const btnCat1 = document.getElementById('btn-cat1');
+const btnCat2 = document.getElementById('btn-cat2');
+const cardCat1 = document.getElementById('card-cat1');
+const cardCat2 = document.getElementById('card-cat2');
 
-// 第一隻貓咪按鈕的互動
-btn_cat1.addEventListener('click', function() {
-    btn_cat1.classList.add('active');
-    btn_cat2.classList.remove('active');
+// 2. 胖丁 (第一隻貓) 按鈕的互動
+btnCat1.addEventListener('click', function() {
+    btnCat1.classList.add('active');
+    btnCat2.classList.remove('active');
 
-    card_cat1.classList.remove('hidden_card');
-    card_cat1.classList.add('active_card');
+    cardCat1.classList.remove('hidden-card');
+    cardCat1.classList.add('active-card');
     
-    card_cat2.classList.remove('active_card');
-    card_cat2.classList.add('hidden_card');
+    cardCat2.classList.remove('active-card');
+    cardCat2.classList.add('hidden-card');
 });
 
-// 第二隻貓咪按鈕的互動
-btn_cat2.addEventListener('click', function() {
-    btn_cat2.classList.add('active');
-    btn_cat1.classList.remove('active');
+// 3. 夢幻 (第二隻貓) 按鈕的互動
+btnCat2.addEventListener('click', function() {
+    btnCat2.classList.add('active');
+    btnCat1.classList.remove('active');
 
-    card_cat2.classList.remove('hidden_card');
-    card_cat2.classList.add('active_card');
+    cardCat2.classList.remove('hidden-card');
+    cardCat2.classList.add('active-card');
     
-    card_cat1.classList.remove('active_card');
-    card_cat1.classList.add('hidden_card');
+    cardCat1.classList.remove('active-card');
+    cardCat1.classList.add('hidden-card');
 });
