@@ -6,7 +6,6 @@
 }
 
 body {
-    /* 設定好看的字體與溫暖的米色背景 */
     font-family: 'Helvetica Neue', Arial, '微軟正黑體', sans-serif;
     background-color: #fcf9f2; 
     color: #4a4a4a;
@@ -15,7 +14,6 @@ body {
     padding-bottom: 60px;
 }
 
-/* 讓整個網頁在電腦大螢幕上也維持手機版的精緻比例（置中） */
 header, section, footer {
     max-width: 500px;
     margin: 0 auto;
@@ -29,54 +27,52 @@ h1 {
     color: #333;
 }
 
-.toggle-buttons {
+.toggle_buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-bottom: 10px;
 }
 
-.toggle-buttons button {
+.toggle_buttons button {
     padding: 10px 30px;
     font-size: 1.1rem;
     font-weight: bold;
-    border: 2px solid #ffb380; /* 溫暖的橘色邊框 */
+    border: 2px solid #ffb380;
     background-color: transparent;
     color: #ffb380;
-    border-radius: 30px; /* 圓角按鈕 */
+    border-radius: 30px;
     cursor: pointer;
-    transition: all 0.3s ease; /* 變色時有動畫效果 */
+    transition: all 0.3s ease;
 }
 
-/* 按鈕被選中時的樣式 */
-.toggle-buttons button.active {
+.toggle_buttons button.active {
     background-color: #ffb380;
     color: white;
 }
 
 /* --- 動態名片區 --- */
-.profile-card {
+.profile_card {
     background-color: white;
     border-radius: 20px;
     padding: 30px 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* 淡淡的陰影讓名片浮起來 */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     margin-bottom: 30px;
 }
 
-/* 這裡非常重要：把非作用中的名片藏起來！ */
-.hidden-card {
+.hidden_card {
     display: none !important; 
 }
 
-.active-card {
+.active_card {
     display: block; 
 }
 
 .avatar {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* 變成完美的圓形 */
-    object-fit: cover; /* 確保照片比例不變形 */
+    border-radius: 50%;
+    object-fit: cover;
     border: 5px solid #fcf9f2;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     margin-bottom: 15px;
@@ -97,33 +93,33 @@ h3 {
     padding-bottom: 5px;
 }
 
-.gallery-grid {
+.gallery_grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 照片分成兩排並列 */
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
 
-.gallery-grid img {
+.gallery_grid img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* 強制把照片裁切成正方形，看起來才整齊 */
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
 /* --- 動態影音區 --- */
-.video-section video {
+.video_section video {
     width: 100%;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
 /* --- 底部社群入口 --- */
-.social-btn {
+.social_btn {
     display: inline-block;
     background-color: #ffb380;
     color: white;
-    text-decoration: none; /* 去掉超連結的底線 */
+    text-decoration: none;
     padding: 15px 40px;
     border-radius: 30px;
     font-size: 1.1rem;
