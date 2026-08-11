@@ -19,14 +19,10 @@
 
     <!-- 中段上：動態名片區 -->
     <section class="profile-section">
-        <!-- 第一隻貓咪的名片 -->
         <div id="card-cat1" class="profile-card active-card">
-            <!-- 檔案名稱維持你設定的底線不變 -->
             <img src="media/cat1-avatar.jpeg" alt="胖丁" class="avatar">
             <h2>胖丁</h2>
         </div>
-
-        <!-- 第二隻貓咪的名片 -->
         <div id="card-cat2" class="profile-card hidden-card">
             <img src="media/cat2-avatar.jpeg" alt="夢幻" class="avatar">
             <h2>夢幻</h2>
@@ -36,14 +32,28 @@
     <!-- 中段：生活寫真牆 -->
     <section class="gallery-section">
         <h3>工地巡視紀錄</h3>
-        <div class="gallery-grid">
-            <img src="media/photo-1.jpeg" alt="巡視照 1">
-            <img src="media/photo-2.jpeg" alt="巡視照 2">
-            <img src="media/photo-3.jpeg" alt="巡視照 3">
-            <img src="media/photo-4.jpeg" alt="巡視照 4">
-            <img src="media/photo-5.jpeg" alt="巡視照 5">
-            <img src="media/photo-6.jpeg" alt="巡視照 6">
+        
+        <!-- 新增：左右滑動的分類按鈕區 -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="cat1">胖丁</button>
+            <button class="filter-btn" data-filter="cat2">夢幻</button>
+            <button class="filter-btn" data-filter="work">上班日常</button>
+            <button class="filter-btn" data-filter="slack">打混摸魚</button>
         </div>
+
+        <!-- 智慧型照片牆：加上隱藏的 data-category 標籤供 JS 篩選 -->
+        <div class="gallery-grid" id="gallery-grid">
+            <img src="media/photo-1.jpeg" alt="巡視照 1" class="gallery-item" data-category="cat1 work">
+            <img src="media/photo-2.jpeg" alt="巡視照 2" class="gallery-item" data-category="cat2 slack">
+            <img src="media/photo-3.jpeg" alt="巡視照 3" class="gallery-item" data-category="cat1 slack">
+            <img src="media/photo-4.jpeg" alt="巡視照 4" class="gallery-item" data-category="cat2 work">
+            <img src="media/photo-5.jpeg" alt="巡視照 5" class="gallery-item" data-category="cat1 work">
+            <img src="media/photo-6.jpeg" alt="巡視照 6" class="gallery-item" data-category="cat2 slack">
+        </div>
+
+        <!-- 新增：載入更多按鈕 -->
+        <button id="load-more-btn" class="load-more-btn">載入更多日常 🔽</button>
     </section>
 
     <!-- 中段下：動態影音區 -->
@@ -56,6 +66,12 @@
     <footer>
         <a href="https://line.me/S/sticker/33531700/?lang=zh-Hant&utm_source=gnsh_stickerDetail" target="_blank" class="social-btn">查看工地貓的LINE貼圖</a>
     </footer>
+
+    <!-- 新增：放大燈箱區塊 (預設隱藏，位於網頁最上層) -->
+    <div id="lightbox" class="lightbox">
+        <span id="lightbox-close" class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" src="">
+    </div>
 
     <script src="script.js"></script>
 </body>
